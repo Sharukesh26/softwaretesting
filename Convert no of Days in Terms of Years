@@ -1,0 +1,39 @@
+Write a Java Program to Convert a Given Number of Days in Terms of Years, Weeks & Days. The output values should verify using white box testing.
+
+package proggrammingknowledge;
+import java.util.Scanner;
+
+public class YearsWeeksDays {
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter number of days: ");
+        int days = scanner.nextInt();
+
+        int years = days / 365;
+        int weeks = (days % 365) / 7;
+        int remainingDays = (days % 365) % 7;
+
+        System.out.println(days + " days is approximately:");
+        System.out.println(years + " years, " + weeks + " weeks, and " + remainingDays + " days.");
+
+}
+}
+package proggrammingknowledge;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+class YearsWeeksDaysconvert {
+                                                  @Test
+	void testYearsWeeksDaysconvert() {
+		 int days = 1000; 
+
+	        int years = days / 365;
+	        int weeks = (days % 365) / 7;
+	        int remainingDays = (days % 365) % 7;
+                                                              assertEquals(2, years); 
+	        assertEquals(38, weeks); 
+	        assertEquals(4, remainingDays); 
+		
+	}
+
+}
