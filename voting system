@@ -1,0 +1,39 @@
+Write a Junit code for voting system and uses assert statement and verify the white box testing.
+
+package votingsys;
+
+public class vote {
+	public static String checkEligibility(int age)
+	{
+        if (age >= 18) {
+            return "Eligible for voting";
+        } 
+        else {
+            return "Not eligible for voting";
+        }
+	}
+}
+
+package votingsys;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class voteTest {
+
+	@Test
+
+		 void testEligibleVoter() {
+	        assertEquals("Eligible for voting", vote.checkEligibility(18));
+	        assertEquals("Eligible for voting", vote.checkEligibility(21));
+	        assertEquals("Eligible for voting", vote.checkEligibility(30));
+	    }
+
+	    @Test
+	     void testNonEligibleVoter() {
+	        assertEquals("Not eligible for voting", vote.checkEligibility(17));
+	        assertEquals("Not eligible for voting", vote.checkEligibility(16));
+	        assertEquals("Not eligible for voting", vote.checkEligibility(12));
+	    }
+	}
