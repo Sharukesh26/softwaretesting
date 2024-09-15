@@ -1,0 +1,35 @@
+Write a program to convert Decimal number equivalent to Binary number and octal numbers. The output values should verify using white box testing.
+
+
+
+
+
+package coding;
+public class NumberConverter {
+	public static String decimalToBinary(int decimal) {
+        return Integer.toBinaryString(decimal);
+    }
+
+    public static String decimalToOctal(int decimal) {
+        return Integer.toOctalString(decimal);
+	    }
+	}
+package coding;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+class DecmialToBinaryOctal {
+         @Test
+    public void testDecimalToBinary() {
+        int decimal = 10;
+        String expectedBinary = "1010";
+        String actualBinary = NumberConverter.decimalToBinary(decimal);
+        assertEquals(expectedBinary, actualBinary);
+    }
+       @Test
+    public void testDecimalToOctal() {
+        int decimal = 10;
+        String expectedOctal = "12";
+        String actualOctal = NumberConverter.decimalToOctal(decimal);
+        assertEquals(expectedOctal, actualOctal);
+    }
+}
