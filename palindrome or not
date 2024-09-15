@@ -1,0 +1,49 @@
+Check whether the given number is palindrome or not and verify the output values should verify using white box testing.
+
+
+package proggrammingknowledge;
+
+public class Palindrome {
+    
+ public static void main(String[] args) {
+		        String str = "radar";
+		        int left = 0;
+		        int right = str.length() - 1;
+		        while (left < right && str.charAt(left) == str.charAt(right)) {
+		            left++;
+		            right--;
+		        }
+		        if (left >= right) {
+		            System.out.println("Palindrome");
+		        } else {
+		            System.out.println("Not Palindrome");
+		        }
+               
+            }
+         
+ }
+
+package proggrammingknowledge;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+class Palindromeornot {
+                                          @Test
+                                                void testPalindromeornot() {
+                                                           String str = "radar";
+        assertTrue(isPalindrome(str));
+    }
+
+
+private boolean isPalindrome(String str) {
+        int left = 0;
+        int right = str.length() - 1;
+        while (left < right && str.charAt(left) == str.charAt(right)) {
+            left++;
+            right--; 
+}
+return left >= right;
+		
+	}
+
+}
+
