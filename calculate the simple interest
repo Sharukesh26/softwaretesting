@@ -1,0 +1,20 @@
+Write a program using function to calculate the simple interest. Suppose the customer is a senior citizen. He is being offered 12 percent rate of interest; for all other customers, the ROI is 10 percent. The output values should verify using white box testing.
+
+package simplyintresrtt;
+
+public class simpleintrest {
+		public static double calculateSimpleInterest(double principal, double rate, double time) {
+	        return (principal * rate * time) / 100.0;
+	    }
+
+	}
+	package simplyintresrtt;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+class simpleintrestTest {
+         @Test
+	void testCalculateSimpleInterest() {
+        assertEquals(200.0, simpleintrest.calculateSimpleInterest(1000.0, 5.0, 4.0), 0.01);
+        assertEquals(450.0, simpleintrest.calculateSimpleInterest(3000.0, 3.0, 5.0), 0.01);
+        assertEquals(75.0, simpleintrest.calculateSimpleInterest(1500.0, 2.0, 2.5), 0.01);
+    }}
