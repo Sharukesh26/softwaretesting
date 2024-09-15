@@ -1,0 +1,7 @@
+public static void main(String[] args) {
+
+System.setProperty("webdriver.Chrome.Driver", "C:\\ST\\chromedriver-win64");
+
+ChromeDriver d = new ChromeDriver();
+
+d.get("https://arms.sse.saveetha.com");
