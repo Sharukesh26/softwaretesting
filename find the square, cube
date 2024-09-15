@@ -1,0 +1,36 @@
+Write a program to find the square, cube of the given decimal number. The output values should verify using white box testing
+
+
+
+package proggrammingknowledge;
+import java.util.Scanner;
+
+public class SquareCube {
+	    public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+
+	        System.out.print("Enter a decimal number: ");
+	        double number = scanner.nextDouble();
+
+	        double square = number * number;
+	        double cube = number * number * number;
+
+	        System.out.println("Square of the number: " + square);
+	        System.out.println("Cube of the number: " + cube);
+	    }
+	}
+package proggrammingknowledge;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+class SquareCubeconvert {
+                   @Test
+	void testSquareCubeconvert() {
+double number = 2.5; 
+          double square = number * number;
+        double cube = number * number * number;
+          assertEquals(square, 6.25, 0.0001);   
+        assertEquals(cube, 15.625, 0.0001); 
+		
+	}
+
+}
