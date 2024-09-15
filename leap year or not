@@ -1,0 +1,39 @@
+Find the year of the given date is leap year or not .The output values should verify using white box testing
+
+
+package proggrammingknowledge;
+
+public class LeapYear {
+	public static String checkLeapYear(int year) {
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            return year + " is a leap year.";
+        } else {
+            return year + " is not a leap year.";
+        }
+    }
+
+    public static void main(String[] args) {
+        int year = 2024; 
+        System.out.println(checkLeapYear(year));
+
+}
+}
+package proggrammingknowledge;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class LeapYearornot {
+
+	@Test
+	void testLeapYearornot() {
+	        assertEquals("2024 is a leap year.", LeapYear.checkLeapYear(2024));
+	        assertEquals("2021 is not a leap year.", LeapYear.checkLeapYear(2021));
+	        assertEquals("2000 is a leap year.", LeapYear.checkLeapYear(2000));
+	        assertEquals("1900 is not a leap year.", LeapYear.checkLeapYear(1900));
+		
+	}
+
+}
+
